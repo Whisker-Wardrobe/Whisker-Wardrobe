@@ -14,6 +14,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            animation: heroMove 12s ease-in-out infinite alternate;
+        }
+        @keyframes heroMove {
+            0% { background-position: 50% 50%; }
+            50% { background-position: 60% 55%; }
+            100% { background-position: 40% 45%; }
         }
         .hero-title {
             color: #fff;
@@ -101,68 +107,60 @@
         <div class="d-flex main-content-flex gap-4">
             <!-- Left: บทความ -->
             <div class="article-col" style="flex:1; max-width: 48%;">
-                <h2 class="section-title" style="margin-top:0;">แฟชั่นสัตว์เลี้ยง: สีสันใหม่ของโลกสัตว์</h2>
+                <h2 class="section-title" style="margin-top:0;">สัตว์เลี้ยง: เพื่อนแท้และความหลากหลายของสายพันธุ์</h2>
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-4">
                     <p style="font-size:1.13rem; color:#555;">
-                        แฟชั่นสัตว์เลี้ยงเป็นอีกหนึ่งวัฒนธรรมที่เติบโตอย่างรวดเร็วในยุคปัจจุบัน จากจุดเริ่มต้นที่เน้นการปกป้องสัตว์จากสภาพอากาศ เช่น เสื้อกันหนาวหรือเสื้อกันฝน สู่การออกแบบเสื้อผ้าและเครื่องประดับที่สะท้อนบุคลิกและความน่ารักของสัตว์เลี้ยงแต่ละตัว ไม่ว่าจะเป็นสุนัข แมว กระต่าย นก หรือสัตว์เลี้ยงแปลกใหม่ แฟชั่นเหล่านี้ไม่เพียงแต่เพิ่มความสุขให้กับเจ้าของและสัตว์เลี้ยง แต่ยังกลายเป็นเทรนด์ที่สร้างสังคมและกิจกรรมร่วมกัน เช่น งานประกวดแฟชั่นสัตว์เลี้ยง หรือการถ่ายภาพแฟชั่นสุดสร้างสรรค์
+                        สัตว์เลี้ยงเป็นเพื่อนคู่ใจที่อยู่เคียงข้างมนุษย์มานาน ไม่ว่าจะเป็นสุนัขผู้ซื่อสัตย์ แมวผู้รักอิสระ กระต่ายแสนขี้เล่น หรือแม้แต่นกและสัตว์เลี้ยงแปลกใหม่แต่ละชนิดล้วนมีเสน่ห์และบุคลิกเฉพาะตัว สายพันธุ์ของสัตว์เลี้ยงมีความหลากหลาย ทั้งรูปร่าง สีสัน และนิสัย ทำให้ผู้เลี้ยงสามารถเลือกสัตว์ที่เหมาะกับไลฟ์สไตล์ของตนเองได้อย่างลงตัว
+                    </p>
+                    <p style="font-size:1.13rem; color:#555;">
+                        การเลี้ยงสัตว์ไม่เพียงแต่ช่วยเติมเต็มความสุขและลดความเหงา แต่ยังสอนให้เรารู้จักความรับผิดชอบ การดูแลเอาใจใส่ และความอดทน สัตว์เลี้ยงแต่ละสายพันธุ์ต้องการการดูแลที่แตกต่างกัน เช่น สุนัขบางสายพันธุ์ต้องการออกกำลังกายมาก แมวบางสายพันธุ์ต้องการพื้นที่ส่วนตัว หรือกระต่ายที่ต้องการอาหารและกรงที่เหมาะสม การศึกษาข้อมูลสายพันธุ์และพฤติกรรมของสัตว์เลี้ยงจึงเป็นสิ่งสำคัญ เพื่อให้พวกเขามีสุขภาพดีและมีความสุขในบ้านของเรา
                     </p>
                 </div>
             </div>
-            <!-- Right: หมวดหมู่แฟชั่น -->
+            <!-- Right: หมวดหมู่การดูแลสัตว์เลี้ยง -->
             <div class="category-col" style="flex:1.1; max-width: 52%;">
-                <h2 class="section-title" style="margin-top:0;">หมวดหมู่แฟชั่นสัตว์ยอดนิยม</h2>
+                <h2 class="section-title" style="margin-top:0;">หมวดหมู่การดูแลสัตว์เลี้ยงยอดนิยม</h2>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col">
                         <div class="category-card card h-100">
-                            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="สุนัขใส่เสื้อฮู้ดแฟชั่น">
+                            <img src="https://www.utmost-pet.com/wp-content/uploads/2023/09/%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9D%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B8%9B%E0%B9%88%E0%B8%A7%E0%B8%A2-24-%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%82%E0%B8%A1%E0%B8%87.png" class="card-img-top" alt="สัตวแพทย์ตรวจสุขภาพสุนัข">
                             <div class="card-body">
-                                <h2 class="card-title">1. แฟชั่นสุนัข (Dog Fashion)</h2>
+                                <h2 class="card-title">1. การดูแลสุขภาพสัตว์เลี้ยง</h2>
                                 <div class="desc">
-                                    เสื้อฮู้ด กางเกงยีนส์ หรือเสื้อยืดลายเท่ๆ สำหรับสุนัข เพิ่มความเท่และดูทันสมัย เหมาะกับการพาไปเดินเล่นในเมือง หรือชุดหรูหราสำหรับออกงาน
+                                    การให้อาหารที่เหมาะสม การอาบน้ำ ตัดขน ตรวจสุขภาพ และการฉีดวัคซีนเป็นประจำ เพื่อให้สัตว์เลี้ยงแข็งแรงและมีอายุยืนยาว
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="category-card card h-100">
-                            <img src="https://images.unsplash.com/photo-1518715308788-3005759c61d3?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="แมวใส่ชุดแฟชั่น">
+                            <img src="https://img.salehere.co.th/p/1200x0/2022/05/25/w8j0gak3am8c.jpg" class="card-img-top" alt="ฝึกสุนัขนั่ง">
                             <div class="card-body">
-                                <h2 class="card-title">2. แฟชั่นแมว (Cat Fashion)</h2>
+                                <h2 class="card-title">2. ทริกการฝึกสัตว์เลี้ยง</h2>
                                 <div class="desc">
-                                    เสื้อไหมพรม หมวก หรือผ้าพันคอสำหรับแมว เพิ่มความอบอุ่นและน่ารัก พร้อมชุดแฟนซีสำหรับถ่ายรูปหรือออกงานพิเศษ
+                                    การฝึกคำสั่งพื้นฐาน เช่น นั่ง หมอบ คอย หรือการขับถ่ายให้เป็นที่ รวมถึงการใช้ขนมและคำชมเพื่อเสริมสร้างพฤติกรรมที่ดี
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="category-card card h-100">
-                            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="กระต่ายใส่ชุดแฟชั่น">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQltjOn-_mX5-b0X1wNqKBrCVNbe3euw0uo-g&s" class="card-img-top" alt="เจ้าของกอดสัตว์เลี้ยง">
                             <div class="card-body">
-                                <h2 class="card-title">3. แฟชั่นกระต่าย (Rabbit Fashion)</h2>
+                                <h2 class="card-title">3. การทำให้สัตว์เลี้ยงอารมณ์ดี</h2>
                                 <div class="desc">
-                                    ชุดกระต่ายน้อย หมวกน่ารัก หรือเสื้อผ้าสีสันสดใสสำหรับกระต่าย เหมาะกับการถ่ายภาพและสร้างความโดดเด่นให้สัตว์เลี้ยงตัวจิ๋ว
+                                    การให้ความรัก การพูดคุย เล่น หรือพาออกไปเดินเล่นนอกบ้าน ช่วยลดความเครียดและทำให้สัตว์เลี้ยงมีความสุข
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="category-card card h-100">
-                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="นกใส่เครื่องประดับ">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayxkaTfsg0Xr-c9UiUhMrDxYs9NF3sQTklCP0Z0mx6lnV69UQ4XOY9nZAfuS24-Jr-VQ&usqp=CAU" class="card-img-top" alt="เล่นกับสัตว์เลี้ยง">
                             <div class="card-body">
-                                <h2 class="card-title">4. แฟชั่นนก (Bird Fashion)</h2>
+                                <h2 class="card-title">4. การเล่นกับสัตว์เลี้ยง</h2>
                                 <div class="desc">
-                                    ปีกประดับ ปลอกคอ หรือเครื่องประดับเล็กๆ สำหรับนก เพิ่มความสวยงามและความโดดเด่นในงานประกวดหรือกิจกรรมพิเศษ
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="category-card card h-100">
-                            <img src="https://images.unsplash.com/photo-1518715308788-3005759c61d3?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="สัตว์เลี้ยงแปลกใส่ชุดแฟชั่น">
-                            <div class="card-body">
-                                <h2 class="card-title">5. แฟชั่นสัตว์เลี้ยงแปลก (Exotic Pet Fashion)</h2>
-                                <div class="desc">
-                                    เสื้อผ้าและเครื่องประดับสำหรับสัตว์เลี้ยงแปลก เช่น หนูแฮมสเตอร์ เฟอเรท หรืออีกัวน่า ที่ออกแบบมาเฉพาะเพื่อความปลอดภัยและความน่ารัก
+                                    การเลือกของเล่นที่เหมาะสม การเล่นโยนบอล หรือกิจกรรมที่กระตุ้นทั้งร่างกายและสมอง ช่วยเสริมสร้างความสัมพันธ์ที่ดีระหว่างเจ้าของกับสัตว์เลี้ยง
                                 </div>
                             </div>
                         </div>
