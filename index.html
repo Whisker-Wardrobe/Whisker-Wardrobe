@@ -14,10 +14,10 @@
         /* Navbar */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;    /* เปลี่ยนจาก space-between เป็น flex-start */
             align-items: center;
             background: #fff;
-            padding: 16px 40px;
+            padding: 16px 24px;            /* ลด padding ซ้ายขวา */
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .navbar .logo {
@@ -25,6 +25,7 @@
             font-weight: bold;
             color: #f57c00;
             letter-spacing: 2px;
+            margin-right: 32px;             /* เพิ่มระยะห่างโลโก้กับเมนู */
         }
         .navbar ul {
             list-style: none;
@@ -155,7 +156,7 @@
             <li><a href="index.html">หน้าแรก</a></li>
             <li><a href="about.html">เกี่ยวกับเรา</a></li>
             <li><a href="product.html">สินค้า</a></li>
-            <li><a href="article.html">บทความ</a></li>
+            <li><a href="articae.html">บทความ</a></li>
             <li><a href="contact.html">ติดต่อเรา</a></li>
         </ul>
     </nav>
@@ -170,17 +171,17 @@
     <h2 class="section-title">สินค้าแนะนำ</h2>
     <div class="products">
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="เสื้อแมวลายสก็อต">
+            <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg" alt="เสื้อแมวลายสก็อต">
             <h3>เสื้อแมวลายสก็อต</h3>
             <p>฿250</p>
         </div>
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="ปลอกคอแฟชั่น">
+            <img src="https://image.dogilike.com/shareimg/contentimg/2016/prig/Tip/18%2001/6.jpg" alt="ปลอกคอแฟชั่น">
             <h3>ปลอกคอแฟชั่น</h3>
             <p>฿120</p>
         </div>
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="หมวกน่ารัก">
+            <img src="https://image.dogilike.com/shareimg/contentimg/2016/prig/Tip/18%2001/5.jpg" alt="หมวกน่ารัก">
             <h3>หมวกน่ารัก</h3>
             <p>฿180</p>
         </div>
@@ -190,12 +191,12 @@
     <h2 class="section-title">บทความล่าสุด</h2>
     <div class="articles">
         <div class="article-card">
-            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="แฟชั่นสัตว์เลี้ยง">
+            <img src="https://image.dogilike.com/shareimg/contentimg/2016/prig/Tip/18%2001/8.jpg" alt="แฟชั่นสัตว์เลี้ยง">
             <h4>5 ไอเดียแฟชั่นสำหรับแมว</h4>
             <p>แนะนำเทรนด์แฟชั่นใหม่ๆ สำหรับแมวเหมียวของคุณ ให้ดูดีทุกโอกาส</p>
         </div>
         <div class="article-card">
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="การเลือกเสื้อผ้าสัตว์เลี้ยง">
+            <img src="https://image.dogilike.com/shareimg/contentimg/2016/prig/Tip/18%2001/2.jpg" alt="การเลือกเสื้อผ้าสัตว์เลี้ยง">
             <h4>เลือกเสื้อผ้าให้เหมาะกับสัตว์เลี้ยง</h4>
             <p>เคล็ดลับการเลือกเสื้อผ้าให้เหมาะกับขนาดและนิสัยของสัตว์เลี้ยง</p>
         </div>
