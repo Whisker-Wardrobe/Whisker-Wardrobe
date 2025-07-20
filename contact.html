@@ -1,1 +1,145 @@
-มีอะไรสอบถามได้
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ติดต่อฉัน | Whisker Wardrobe</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: 
+                linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1000&q=80');
+            /* ภาพแมวใส่เสื้อผ้า */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .contact-container {
+            max-width: 500px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+            padding: 40px 30px;
+            position: relative;
+            z-index: 2;
+        }
+        .pet-icons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .pet-icons img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #ffb347;
+            background: #fff;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(255,127,80,0.10);
+        }
+        .contact-container h2 {
+            color: #ff7f50;
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+        }
+        .contact-info {
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        form label {
+            display: block;
+            margin-bottom: 7px;
+            color: #333;
+            font-weight: 600;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+            background: #fafafa;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #ff7f50;
+            outline: none;
+            background: #fff;
+        }
+        form button {
+            background: linear-gradient(90deg, #ff7f50 60%, #ffb347 100%);
+            color: #fff;
+            border: none;
+            padding: 14px 0;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 1.15em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 8px rgba(255,127,80,0.08);
+        }
+        form button:hover {
+            background: linear-gradient(90deg, #ff6333 60%, #ffb347 100%);
+            transform: translateY(-2px) scale(1.02);
+        }
+        @media (max-width: 600px) {
+            .contact-container {
+                padding: 18px 6vw;
+            }
+            .pet-icons img {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="pet-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cat in clothes" title="Cat">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dog in clothes" title="Dog" style="filter: hue-rotate(120deg);">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Rabbit in clothes" title="Rabbit" style="filter: hue-rotate(240deg);">
+        </div>
+        <h2>ติดต่อฉัน</h2>
+        <div class="contact-info">
+            <p><strong>อีเมล:</strong> whisker.wardrobe@email.com</p>
+            <p><strong>โทร:</strong> 081-234-5678</p>
+            <p><strong>Facebook:</strong> <a href="https://facebook.com/whiskerwardrobe" target="_blank">Whisker Wardrobe</a></p>
+        </div>
+        <form>
+            <label for="name">ชื่อของคุณ</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">ข้อความ</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+    </div>
+</body>
+</html>
