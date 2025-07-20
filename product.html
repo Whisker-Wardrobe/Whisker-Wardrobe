@@ -8,10 +8,10 @@
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; }
         .navbar {
             display: flex;
-            justify-content: flex-start;    /* เปลี่ยนจาก space-between เป็น flex-start */
+            justify-content: space-between;
             align-items: center;
             background: #fff;
-            padding: 16px 24px;            /* ลด padding ซ้ายขวา */
+            padding: 16px 40px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .navbar .logo {
@@ -19,7 +19,6 @@
             font-weight: bold;
             color: #f57c00;
             letter-spacing: 2px;
-            margin-right: 32px;             /* เพิ่มระยะห่างโลโก้กับเมนู */
         }
         .navbar ul {
             list-style: none;
@@ -210,13 +209,18 @@
     <nav class="navbar">
         <div class="logo">Whisker Wardrobe</div>
         <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
+       <li><a href="index.html">หน้าแรก</a></li>
             <li><a href="about.html">เกี่ยวกับเรา</a></li>
             <li><a href="product.html">สินค้า</a></li>
-            <li><a href="artical.html">บทความ</a></li>
+            <li><a href="article.html">บทความ</a></li>
             <li><a href="contact.html">ติดต่อเรา</a></li>
         </ul>
     </nav>
+
+    <!-- Cart Bar -->
+    <div class="cart-bar" id="cartBar">
+        🛒 <span id="cartCount">0</span> รายการ
+    </div>
 
     <!-- Cart Modal -->
     <div class="cart-modal-bg" id="cartModalBg">
@@ -264,42 +268,42 @@
                 name: "เสื้อแมวลายสก็อต",
                 price: 250,
                 category: "เสื้อผ้า",
-                img: "https://down-th.img.susercontent.com/file/75c0eede4fe8beffcdbcc7b199bfae5f"
+                img: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
             },
             {
                 id: 2,
                 name: "ปลอกคอแฟชั่น",
                 price: 120,
                 category: "ปลอกคอ",
-                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXNgf8O8lYI22zDSca6tdy0Op3DYYDNa-EA&s"
+                img: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=400&q=80"
             },
             {
                 id: 3,
                 name: "หมวกน่ารัก",
                 price: 180,
                 category: "หมวก",
-                img: "https://down-th.img.susercontent.com/file/sg-11134201-7rdx5-m0jmm56hufb2ec"
+                img: "https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80"
             },
             {
                 id: 4,
                 name: "เสื้อสุนัขลายทาง",
                 price: 270,
                 category: "เสื้อผ้า",
-                img: "https://down-th.img.susercontent.com/file/sg-11134201-7rd5h-m77brzqa5swq95_tn.webp"
+                img: "https://images.unsplash.com/photo-1518712639211-1b41d6a6c6c4?auto=format&fit=crop&w=400&q=80"
             },
             {
                 id: 5,
                 name: "ปลอกคอหนังแท้",
                 price: 200,
                 category: "ปลอกคอ",
-                img: "https://obs-ect.line-scdn.net/r/ect/ect/image_166368992185082892519cb4530t10660bb1"
+                img: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
             },
             {
                 id: 6,
                 name: "หมวกแฟนซี",
                 price: 210,
                 category: "หมวก",
-                img: "https://obs-ect.line-scdn.net/r/ect/ect/image_165951472728293940719d06508t10265657"
+                img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
             }
         ];
 
