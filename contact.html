@@ -19,10 +19,11 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: flex-start;   /* เปลี่ยนจาก space-between เป็น flex-start */
             align-items: center;
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 16px 40px;
+            padding: 16px 24px;            /* ลด padding ซ้ายขวา */
             position: fixed;
             width: 100%;
             top: 0;
@@ -35,10 +36,12 @@
             font-weight: bold;
             color: #f57c00;
             letter-spacing: 2px;
+            margin-right: 32px;            /* เพิ่มระยะห่างโลโก้กับเมนู */
         }
         .navbar ul {
             list-style: none;
             display: flex;
+            flex-wrap: wrap; 
             gap: 32px;
             margin: 0;
             padding: 0;
@@ -145,7 +148,7 @@
         @media (max-width: 600px) {
             .contact-container {
                 padding: 18px 6vw;
-                margin: 90px 8px 32px 8px;
+                margin: 80px 8px 32px 8px;
             }
             .pet-icons img {
                 width: 38px;
@@ -159,6 +162,18 @@
             .navbar ul {
                 gap: 12px;
                 padding: 0;
+            }
+        }
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 8px;
+            }
+            .navbar ul {
+                gap: 12px;
+                padding: 0;
+                justify-content: center;
             }
         }
         footer {
