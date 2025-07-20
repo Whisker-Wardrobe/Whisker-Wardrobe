@@ -17,9 +17,45 @@
             padding: 0;
             min-height: 100vh;
         }
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;   /* เปลี่ยนจาก space-between เป็น flex-start */
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;            /* ลด padding ซ้ายขวา */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff7f50;
+            margin-right: 32px;            /* เพิ่มระยะห่างโลโก้กับเมนู */
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff7f50;
+        }
         .contact-container {
             max-width: 500px;
-            margin: 48px auto;
+            margin: 80px auto 48px;
             background: rgba(255,255,255,0.97);
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.13);
@@ -116,6 +152,16 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">Whisker Wardrobe</div>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="product.html">สินค้า</a></li>
+            <li><a href="artical.html">บทความ</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
     <div class="contact-container">
         <div class="pet-icons">
             <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cat in clothes" title="Cat">
