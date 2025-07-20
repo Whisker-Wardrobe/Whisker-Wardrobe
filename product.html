@@ -1,1 +1,416 @@
-สวัสดี ฉันคือ ฝน วันนี้จะมาขาย เสื้อผ้าน้องหมา 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า | Whisker Wardrobe</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 16px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar .logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #f57c00;
+            letter-spacing: 2px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #f57c00;
+        }
+        .product-hero {
+            background: linear-gradient(90deg, #ffe0b2 60%, #fff3e0 100%);
+            padding: 48px 0 32px 0;
+            text-align: center;
+        }
+        .product-hero h1 {
+            font-size: 2.3rem;
+            color: #f57c00;
+            margin-bottom: 10px;
+        }
+        .product-hero p {
+            font-size: 1.15rem;
+            color: #555;
+        }
+        .filter-bar {
+            max-width: 900px;
+            margin: 32px auto 0 auto;
+            display: flex;
+            gap: 18px;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter-bar input, .filter-bar select {
+            padding: 7px 14px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+        .products-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin: 32px auto 0 auto;
+            max-width: 1100px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            width: 240px;
+            padding: 18px;
+            text-align: center;
+            transition: transform 0.2s;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 14px 0 6px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .product-card p {
+            color: #888;
+            font-size: 1rem;
+        }
+        .product-card button {
+            margin-top: 10px;
+            background: #f57c00;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .product-card button:hover {
+            background: #ff9800;
+        }
+        .cart-bar {
+            position: fixed;
+            top: 24px;
+            right: 32px;
+            background: #fff3e0;
+            color: #f57c00;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 10px 22px;
+            font-weight: bold;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .cart-modal-bg {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.25);
+            justify-content: center;
+            align-items: center;
+        }
+        .cart-modal {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+            padding: 32px 28px 24px 28px;
+            min-width: 320px;
+            max-width: 90vw;
+        }
+        .cart-modal h2 {
+            color: #f57c00;
+            margin-top: 0;
+        }
+        .cart-items {
+            margin: 18px 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+        .cart-item span {
+            font-size: 1rem;
+            color: #333;
+        }
+        .cart-item button {
+            background: none;
+            border: none;
+            color: #f57c00;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .cart-total {
+            text-align: right;
+            font-weight: bold;
+            color: #f57c00;
+            margin-top: 10px;
+        }
+        .close-cart {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #f57c00;
+            cursor: pointer;
+        }
+        footer {
+            background: #f57c00;
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .products-list { flex-direction: column; align-items: center; }
+            .navbar { flex-direction: column; gap: 12px; }
+            .filter-bar { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Whisker Wardrobe</div>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="product.html">สินค้า</a></li>
+            <li><a href="#">บทความ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Bar -->
+    <div class="cart-bar" id="cartBar">
+        🛒 <span id="cartCount">0</span> รายการ
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-bg" id="cartModalBg">
+        <div class="cart-modal">
+            <button class="close-cart" id="closeCart">&times;</button>
+            <h2>ตะกร้าสินค้า</h2>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total" id="cartTotal"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="product-hero">
+        <h1>สินค้า</h1>
+        <p>เลือกซื้อเสื้อผ้าและอุปกรณ์สำหรับสัตว์เลี้ยงสุดน่ารักของคุณ</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="ค้นหาสินค้า...">
+        <select id="categorySelect">
+            <option value="">ทุกหมวดหมู่</option>
+            <option value="เสื้อผ้า">เสื้อผ้า</option>
+            <option value="ปลอกคอ">ปลอกคอ</option>
+            <option value="หมวก">หมวก</option>
+        </select>
+    </div>
+
+    <!-- Products List -->
+    <div class="products-list" id="productsList">
+        <!-- สินค้าจะถูกแสดงที่นี่ -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>© 2025 Whisker Wardrobe. สงวนลิขสิทธิ์.</div>
+        <div>ติดต่อ: whiskerwardrobe@email.com | โทร: 02-123-4567</div>
+    </footer>
+
+    <script>
+        // สินค้าตัวอย่าง (เพิ่มรูปแตกต่างกันในแต่ละสินค้า)
+        const products = [
+            {
+                id: 1,
+                name: "เสื้อแมวลายสก็อต",
+                price: 250,
+                category: "เสื้อผ้า",
+                img: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 2,
+                name: "ปลอกคอแฟชั่น",
+                price: 120,
+                category: "ปลอกคอ",
+                img: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 3,
+                name: "หมวกน่ารัก",
+                price: 180,
+                category: "หมวก",
+                img: "https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 4,
+                name: "เสื้อสุนัขลายทาง",
+                price: 270,
+                category: "เสื้อผ้า",
+                img: "https://images.unsplash.com/photo-1518712639211-1b41d6a6c6c4?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 5,
+                name: "ปลอกคอหนังแท้",
+                price: 200,
+                category: "ปลอกคอ",
+                img: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                id: 6,
+                name: "หมวกแฟนซี",
+                price: 210,
+                category: "หมวก",
+                img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
+            }
+        ];
+
+        let cart = [];
+
+        // แสดงสินค้า
+        function renderProducts() {
+            const list = document.getElementById('productsList');
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const category = document.getElementById('categorySelect').value;
+            list.innerHTML = '';
+            let filtered = products.filter(p => 
+                (p.name.toLowerCase().includes(search)) &&
+                (category === '' || p.category === category)
+            );
+            if (filtered.length === 0) {
+                list.innerHTML = '<div style="color:#f57c00;font-size:1.2rem;">ไม่พบสินค้า</div>';
+                return;
+            }
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${p.img}" alt="${p.name}">
+                    <h3>${p.name}</h3>
+                    <p>฿${p.price}</p>
+                    <button onclick="addToCart(${p.id})">เพิ่มลงตะกร้า</button>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        // เพิ่มสินค้าในตะกร้า
+        function addToCart(id) {
+            const found = cart.find(item => item.id === id);
+            if (found) {
+                found.qty += 1;
+            } else {
+                const prod = products.find(p => p.id === id);
+                cart.push({ ...prod, qty: 1 });
+            }
+            updateCartBar();
+        }
+
+        // อัปเดตจำนวนสินค้าในตะกร้า
+        function updateCartBar() {
+            document.getElementById('cartCount').textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+        }
+
+        // แสดงตะกร้า
+        function showCart() {
+            document.getElementById('cartModalBg').style.display = 'flex';
+            renderCart();
+        }
+
+        // ปิดตะกร้า
+        function closeCart() {
+            document.getElementById('cartModalBg').style.display = 'none';
+        }
+
+        // แสดงรายการในตะกร้า
+        function renderCart() {
+            const itemsDiv = document.getElementById('cartItems');
+            const totalDiv = document.getElementById('cartTotal');
+            itemsDiv.innerHTML = '';
+            if (cart.length === 0) {
+                itemsDiv.innerHTML = '<div style="color:#f57c00;">ไม่มีสินค้าในตะกร้า</div>';
+                totalDiv.textContent = '';
+                return;
+            }
+            cart.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'cart-item';
+                row.innerHTML = `
+                    <span>${item.name} x ${item.qty}</span>
+                    <span>฿${item.price * item.qty}</span>
+                    <button onclick="removeFromCart(${item.id})">ลบ</button>
+                `;
+                itemsDiv.appendChild(row);
+            });
+            const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+            totalDiv.textContent = `รวมทั้งหมด: ฿${total}`;
+        }
+
+        // ลบสินค้าออกจากตะกร้า
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartBar();
+            renderCart();
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', renderProducts);
+        document.getElementById('categorySelect').addEventListener('change', renderProducts);
+        document.getElementById('cartBar').addEventListener('click', showCart);
+        document.getElementById('closeCart').addEventListener('click', closeCart);
+        document.getElementById('cartModalBg').addEventListener('click', function(e){
+            if (e.target === this) closeCart();
+        });
+
+        // Initial render
+        renderProducts();
+        updateCartBar();
+
+        // ให้สามารถใช้ addToCart/removeFromCart จาก HTML
+        window.addToCart = addToCart;
+        window.removeFromCart = removeFromCart;
+    </script>
+</body>
+</html>
