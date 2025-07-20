@@ -5,53 +5,36 @@
     <title>ติดต่อฉัน | Whisker Wardrobe</title>
     <link href="https://fonts.googleapis.com/css?family=Kanit:400,700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-            background: 
-                linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1000&q=80');
-            /* ภาพแมวใส่เสื้อผ้า */
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
         .navbar {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;   /* เปลี่ยนจาก space-between เป็น flex-start */
+            justify-content: flex-start;    /* เปลี่ยนจาก space-between เป็น flex-start */
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.9);
+            background: #fff;
             padding: 16px 24px;            /* ลด padding ซ้ายขวา */
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        .logo {
-            font-size: 1.8em;
+        .navbar .logo {
+            font-size: 1.7rem;
             font-weight: bold;
-            color: #ff7f50;
-            margin-right: 32px;            /* เพิ่มระยะห่างโลโก้กับเมนู */
+            color: #f57c00;
+            letter-spacing: 2px;
+            margin-right: 32px;             /* เพิ่มระยะห่างโลโก้กับเมนู */
         }
         .navbar ul {
             list-style: none;
+            display: flex;
+            gap: 32px;
             margin: 0;
             padding: 0;
-            display: flex;
-            gap: 20px;
         }
         .navbar a {
             text-decoration: none;
             color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-size: 1.1rem;
+            transition: color 0.2s;
         }
         .navbar a:hover {
-            color: #ff7f50;
+            color: #f57c00;
         }
         .contact-container {
             max-width: 500px;
@@ -158,7 +141,7 @@
             <li><a href="index.html">หน้าแรก</a></li>
             <li><a href="about.html">เกี่ยวกับเรา</a></li>
             <li><a href="product.html">สินค้า</a></li>
-            <li><a href="artical.html">บทความ</a></li>
+            <li><a href="articae.html">บทความ</a></li>
             <li><a href="contact.html">ติดต่อเรา</a></li>
         </ul>
     </nav>
