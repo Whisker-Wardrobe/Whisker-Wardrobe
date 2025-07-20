@@ -1,16 +1,204 @@
-fgdfgdfgdfg
-dfgdfgdfgdfgdg
-dfggggggggg
-sadasdsdsdsd
-sadasdsdsdsdds
-ds
-ds
-ds
-<data value="sadasdsdsdsddsds
-datasd
-sadasdsdsdsddsdsds
-dsds
-dsdsd
-sd"></data>
-iouoiuoiuio
-rerj;<sdgpeldfpsu-s>jmlhkdbnl</sdgpeldfpsu-s>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisker Wardrobe</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 16px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar .logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #f57c00;
+            letter-spacing: 2px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #f57c00;
+        }
+        /* Banner */
+        .banner {
+            background: linear-gradient(90deg, #ffe0b2 60%, #fff3e0 100%);
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 2.5rem;
+            color: #f57c00;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        /* Products */
+        .section-title {
+            text-align: center;
+            margin: 48px 0 24px 0;
+            font-size: 2rem;
+            color: #f57c00;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            width: 220px;
+            padding: 18px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin: 14px 0 6px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .product-card p {
+            color: #888;
+            font-size: 1rem;
+        }
+        /* Articles */
+        .articles {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            width: 320px;
+            padding: 18px;
+            transition: transform 0.2s;
+        }
+        .article-card:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+        .article-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .article-card h4 {
+            margin: 12px 0 8px 0;
+            color: #f57c00;
+            font-size: 1.1rem;
+        }
+        .article-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+        /* Footer */
+        footer {
+            background: #f57c00;
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .products, .articles { flex-direction: column; align-items: center; }
+            .navbar { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Whisker Wardrobe</div>
+        <ul>
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="#">สินค้า</a></li>
+            <li><a href="#">บทความ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>แฟชั่นสำหรับสัตว์เลี้ยงสุดน่ารัก</h1>
+        <p>เลือกสรรเสื้อผ้าและอุปกรณ์สำหรับสัตว์เลี้ยงที่คุณรัก</p>
+    </section>
+
+    <!-- Products -->
+    <h2 class="section-title">สินค้าแนะนำ</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="เสื้อแมวลายสก็อต">
+            <h3>เสื้อแมวลายสก็อต</h3>
+            <p>฿250</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="ปลอกคอแฟชั่น">
+            <h3>ปลอกคอแฟชั่น</h3>
+            <p>฿120</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="หมวกน่ารัก">
+            <h3>หมวกน่ารัก</h3>
+            <p>฿180</p>
+        </div>
+    </div>
+
+    <!-- Articles -->
+    <h2 class="section-title">บทความล่าสุด</h2>
+    <div class="articles">
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1518715308788-3005759c41da?auto=format&fit=crop&w=400&q=80" alt="แฟชั่นสัตว์เลี้ยง">
+            <h4>5 ไอเดียแฟชั่นสำหรับแมว</h4>
+            <p>แนะนำเทรนด์แฟชั่นใหม่ๆ สำหรับแมวเหมียวของคุณ ให้ดูดีทุกโอกาส</p>
+        </div>
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="การเลือกเสื้อผ้าสัตว์เลี้ยง">
+            <h4>เลือกเสื้อผ้าให้เหมาะกับสัตว์เลี้ยง</h4>
+            <p>เคล็ดลับการเลือกเสื้อผ้าให้เหมาะกับขนาดและนิสัยของสัตว์เลี้ยง</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>© 2025 Whisker Wardrobe. สงวนลิขสิทธิ์.</div>
+        <div>ติดต่อ: whiskerwardrobe@email.com | โทร: 02-123-4567</div>
+    </footer>
+</body>
+</html>

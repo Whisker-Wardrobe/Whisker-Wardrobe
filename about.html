@@ -1,1 +1,173 @@
-tarale tarala
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา | Whisker Wardrobe</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 16px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .navbar .logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #f57c00;
+            letter-spacing: 2px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        .navbar a:hover {
+            color: #f57c00;
+        }
+        .about-hero {
+            background: linear-gradient(90deg, #ffe0b2 60%, #fff3e0 100%);
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-size: 2.5rem;
+            color: #f57c00;
+            margin-bottom: 12px;
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 36px 28px;
+        }
+        .about-content h2 {
+            color: #f57c00;
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+        .about-content p {
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        .about-team {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+        .team-card {
+            background: #fff3e0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 20px 18px;
+            width: 180px;
+            text-align: center;
+        }
+        .team-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #f57c00;
+        }
+        .team-card h4 {
+            margin: 8px 0 4px 0;
+            color: #f57c00;
+            font-size: 1.1rem;
+        }
+        .team-card p {
+            color: #666;
+            font-size: 0.98rem;
+        }
+        footer {
+            background: #f57c00;
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .about-content { padding: 24px 10px; }
+            .about-team { flex-direction: column; align-items: center; }
+            .navbar { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Whisker Wardrobe</div>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="#">สินค้า</a></li>
+            <li><a href="#">บทความ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <h1>เกี่ยวกับ Whisker Wardrobe</h1>
+        <p>
+            Whisker Wardrobe ก่อตั้งขึ้นจากความรักในสัตว์เลี้ยงและแฟชั่น เราเชื่อว่าสัตว์เลี้ยงของคุณควรได้รับสิ่งที่ดีที่สุด ทั้งความน่ารักและความสบายใจในทุกวัน
+        </p>
+    </section>
+
+    <!-- About Content -->
+    <div class="about-content">
+        <h2>แรงบันดาลใจของเรา</h2>
+        <p>
+            เราเริ่มต้นจากกลุ่มคนรักสัตว์ที่ต้องการสร้างสรรค์เสื้อผ้าและอุปกรณ์สำหรับสัตว์เลี้ยงที่มีคุณภาพสูง ดีไซน์ทันสมัย และเหมาะกับทุกไลฟ์สไตล์ของสัตว์เลี้ยงในบ้านไทย
+        </p>
+        <p>
+            ทุกชิ้นงานของเราออกแบบโดยคำนึงถึงความปลอดภัยและความสบายของสัตว์เลี้ยงเป็นหลัก พร้อมทั้งใส่ใจในรายละเอียดและเลือกใช้วัสดุที่ดีที่สุด
+        </p>
+        <h2>ทีมงานของเรา</h2>
+        <div class="about-team">
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="ทีมงาน 1">
+                <h4>คุณแนน</h4>
+                <p>ผู้ก่อตั้งและดีไซเนอร์</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="ทีมงาน 2">
+                <h4>คุณบีม</h4>
+                <p>ฝ่ายดูแลลูกค้า</p>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="ทีมงาน 3">
+                <h4>คุณพลอย</h4>
+                <p>ฝ่ายการตลาด</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>© 2025 Whisker Wardrobe. สงวนลิขสิทธิ์.</div>
+        <div>ติดต่อ: whiskerwardrobe@email.com | โทร: 02-123-4567</div>
