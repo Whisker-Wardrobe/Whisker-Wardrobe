@@ -17,6 +17,36 @@
             padding: 0;
             min-height: 100vh;
         }
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .logo {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #f57c00;
+            letter-spacing: 2px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        .navbar a:hover {
+            color: #f57c00;
+        }
         .contact-container {
             max-width: 500px;
             margin: 48px auto;
@@ -116,6 +146,16 @@
     </style>
 </head>
 <body>
+    <nav class="navbar" style="background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.05);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <div class="logo" style="font-size:1.7rem;font-weight:bold;color:#f57c00;letter-spacing:2px;">Whisker Wardrobe</div>
+        <ul style="list-style:none;display:flex;gap:32px;margin:0;padding:0;">
+            <li><a href="index.html" style="text-decoration:none;color:#333;font-size:1.1rem;">หน้าแรก</a></li>
+            <li><a href="about.html" style="text-decoration:none;color:#333;font-size:1.1rem;">เกี่ยวกับเรา</a></li>
+            <li><a href="product.html" style="text-decoration:none;color:#333;font-size:1.1rem;">สินค้า</a></li>
+            <li><a href="article.html" style="text-decoration:none;color:#333;font-size:1.1rem;">บทความ</a></li>
+            <li><a href="contact.html" style="text-decoration:none;color:#f57c00;font-size:1.1rem;font-weight:bold;">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
     <div class="contact-container">
         <div class="pet-icons">
             <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cat in clothes" title="Cat">
