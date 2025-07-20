@@ -8,10 +8,10 @@
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fafafa; }
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;    /* เปลี่ยนจาก space-between เป็น flex-start */
             align-items: center;
             background: #fff;
-            padding: 16px 40px;
+            padding: 16px 24px;            /* ลด padding ซ้ายขวา */
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .navbar .logo {
@@ -19,6 +19,7 @@
             font-weight: bold;
             color: #f57c00;
             letter-spacing: 2px;
+            margin-right: 32px;             /* เพิ่มระยะห่างโลโก้กับเมนู */
         }
         .navbar ul {
             list-style: none;
